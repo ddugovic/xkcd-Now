@@ -14,8 +14,7 @@ function updateMap() {
   console.log('map updated at => ' + moment().format('DD:MM:YYYY HH:mm:ss'));
 }
 
-setTimeout(function() {
+function start() {
   updateMap();
-}, 300000);
-
-updateMap();
+  setInterval(updateMap, 60000);
+}
